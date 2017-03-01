@@ -1,0 +1,172 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 300;
+	overflow: hidden;
+	background: #f0f0f0;
+}
+
+* {
+	box-sizing: border-box;
+
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+.first {
+	background-image: url(../img/background.png);
+	height: 100vh;
+	color: #fff;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: 0.6s ease-in-out;
+}
+
+.first.active {
+	transform: translateX(100%);
+}
+
+.arrow,
+.arrow:before {
+	position: absolute;
+	left: 50%;
+}
+
+.arrow {
+	width: 40px;
+	height: 40px;
+	top: calc(50% - 20px);
+	left: 50px;
+	margin: -20px 0 0 -20px;
+	transform: rotate(-45deg);
+	border-left: none;
+	border-top: none;
+	border-right: 2px #fff solid;
+	border-bottom: 2px #fff solid;
+	cursor: pointer;
+}
+
+.arrow:before {
+	content: "";
+	width: 20px;
+	height: 20px;
+	top: 50%;
+	margin: -10px 0 0 -10px;
+	border-left: none;
+	border-top: none;
+	border-right: 1px #fff solid;
+	border-bottom: 1px #fff solid;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-name: arrow;
+}
+
+@keyframes arrow {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translate(-10px, -10px);
+	}
+}
+
+.second {
+	height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1200px;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+.aboutme {
+	background-color: white;
+	margin: 2%;
+	width: 24%;
+	padding: 20px 53px 10px 53px;
+	box-shadow: -2px -3px 35px -10px rgba(0,0,0,0.75);
+}
+
+hr {
+	border: none;
+	color: #e2e2e2;
+	background-color: #e2e2e2;
+	height: 1px;
+}
+
+.aboutme p {
+	text-align: center;
+	font-size: 18px;
+}
+
+
+
+.photo {
+	text-align: center;
+	background-color: white;
+}
+
+.array {
+	background-color: white;
+}
+
+.album {
+	background-color: white;
+	margin: 2%;
+	width: 68%;
+		box-shadow: -2px -3px 35px -10px rgba(0,0,0,0.75);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.photo_item{
+	width: 30%;
+	padding: 1.5%;
+	
+}
+
+.footer {
+	background-color: white;
+	margin: 2%;
+	width: 96%;
+	text-align: center;
+	padding-top: 10px;
+		box-shadow: -2px -3px 35px -10px rgba(0,0,0,0.75);
+
+}
+
+.name {
+	margin-top: 40px;
+	text-align: center;
+	font-size: 28px;
+}
+.footer_title {
+		font-size: 25px;
+}
+
+.social {
+	padding-top: 10px;
+	padding-left: 3px;
+}
+.social img{
+cursor: pointer;
+}
+
+.copyright {
+	padding-top: 10px;
+	color: #cccccc;
+	padding-bottom: 3px;
+}
